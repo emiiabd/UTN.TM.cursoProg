@@ -7,7 +7,11 @@ CLI: Command Line Interface     (GIT)     |       GUI: Graphic user interface   
 Comandos GITHUB: 
 
 git config --global user.name "username"
-git config --global user.email "userEmail"      //se puede usar comillas o no para esto
-git config --list                               //para verificar la configuracion
+git config --global user.email "userEmail"          //se puede usar comillas o no para esto
+git config --list                                   //para verificar la configuracion | para salir desde la consola de VSC hay que tocar 'q'
 
-CTRL + J                                        // Abrir terminal
+CTRL + J                                            // Abrir terminal VSC
+
+git init                                            // En la terminal para inicializar el repositorio en git
+git add "Nombre de carpt | . (Para anadir todo)"    // Agregar las carpetas bajo tu usuario en GITHUB
+git commit -m "Nombre"                              // Agregar version de las carpetas y archivos un GITHUB
