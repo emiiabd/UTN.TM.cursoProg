@@ -1,0 +1,13 @@
+CLI: Command Line Interface     (GIT)     |       GUI: Graphic user interface    (Visual Studio Code)
+                                (Node)    |
+                                (npm)     |
+
+
+
+Comandos GITHUB: 
+
+git config --global user.name "username"
+git config --global user.email "userEmail"      //se puede usar comillas o no para esto
+git config --list                               //para verificar la configuracion
+
+CTRL + J                                        // Abrir terminal
