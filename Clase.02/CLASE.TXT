@@ -15,3 +15,5 @@ CTRL + J                                            // Abrir terminal VSC
 git init                                            // En la terminal para inicializar el repositorio en git
 git add "Nombre de carpt | . (Para anadir todo)"    // Agregar las carpetas bajo tu usuario en GITHUB
 git commit -m "Nombre"                              // Agregar version de las carpetas y archivos un GITHUB
+
+https://github.com/Matu-Dev-JS/UTN_TM_PWI/blob/main/pasos-git.md //Lista de comandos compilado por el profesor
