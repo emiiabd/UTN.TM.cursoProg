@@ -1,0 +1,7 @@
+<!--esta es una etiqueda de comentario de HTML-->
+<!-- Shortcut/atajos de teclado
+    ctrl + / | alt + shift + a = comentario
+    ctrl + z                   = deshacer
+    ctrl + y                   = rehacer
+    win + .                    = Menu de emojis
+-->
