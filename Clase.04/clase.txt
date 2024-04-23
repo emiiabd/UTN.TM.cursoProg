@@ -1,0 +1,7 @@
+En esta clase se van a ver las etiquetas de multimedia :
+    img
+    audio
+    video  
+    iframes
+
+    alt + z   #Ajusta el codigo al tamano de la pantalla automaticamente
