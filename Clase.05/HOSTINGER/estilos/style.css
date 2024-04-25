@@ -4,12 +4,22 @@ h1 {
     font-weight: 500;
     text-decoration: underline 1px solid;
 }
+
 .sub {
     color: blue;
 }
+
 .sub2{
     color: green;
 }
+
 .subrayado{
     text-decoration: 1px underline red;
+}
+
+.titulo-especial{
+    color: yellow;
+}
+.titulo-especial2{
+    color: aqua;
 }
