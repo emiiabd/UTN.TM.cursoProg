@@ -1,0 +1,38 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.padre{
+    background-color: green;
+    width: 100vw; /* Viewport width, son medidas relativas a la dimensiones del viewport*/
+    height: 100vh; /* Viewport height */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* gap: espaciado entre hijos */
+    gap: 30px;
+    /* justify-content movimiento en el eje x, no siempre en el medio (despues lo vamos a ver) */
+    /* la propiedad:
+    space-between: divide el espacio restante que queda en el padre y lo divide entre el medio de los hijos, espacio / ctidad hijos -1
+    space-evelyn: espacio / ctidad hijos +1
+    space-around: espacio / ctidad hijos
+    */
+    justify-content: space-evenly;
+    /* aling-item movimiento del eje y de los elementos */
+    align-items: center;
+
+}
+
+.padre .hijo{
+    background-color: red;
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.padre .hijo:nth-child(1){
+    background-color: beige;
+}
