@@ -1,5 +1,7 @@
 /* Esto siempre se utiliza por defecto para que no se te modifiquen los tamanos de las cajas */
 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 /*/* Normalize */
 *{
     box-sizing: border-box;
@@ -53,7 +55,7 @@ header{
     padding: 32px;
 }
 header input{
-    width: 344px;
+    width: 100%;
     padding: 10px 15px;
     background-color: white;
     border: none;
@@ -88,4 +90,10 @@ a:hover{
     font-size: 20px;
     border-radius: 10px;
     transition: 500ms ease-in-out;
+}
+
+.b-cont{
+    width: 344px;
+    display: flex;
+    align-items: center;
 }
