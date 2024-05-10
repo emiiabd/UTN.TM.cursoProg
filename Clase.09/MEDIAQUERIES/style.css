@@ -1,0 +1,36 @@
+/* Mobile first */ /* Desktop First */
+
+/* Comenzar segun que tipo de web vas a utilizar, mejor por mobile first dependiendo de la pag */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.padre {
+    height: 100vh;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.padre .hijo{
+    width: 80vw;
+    height: 200px;
+    background-color: bisque;
+    border: 1px solid black;
+}
+/* REGLAS:  -siempre la mediaqueries deben estar abajo de todo por la ppiedad cascada
+            - Los elementos que se quiera modificar siempre deben tener la misma especifidad que sus estilos previos
+             */
+
+/* Cuando el ancho de mi pantalla supera los 1000px */
+@media screen and (min-width: 1000px){
+    .padre{
+        background-color: blue;
+    }
+    .padre .hijo{
+        background-color: blueviolet;
+    }
+}

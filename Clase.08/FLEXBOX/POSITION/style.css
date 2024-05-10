@@ -11,7 +11,8 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    position: relative
+    position: relative;
+    margin-top: 100vh;
 }
 
 .hijo {
@@ -31,8 +32,11 @@
     z-index: 0;
 } */
 .padre .hijo:nth-child(2){
-    position: absolute; /* siempre hay que cambiar la posicion del padre que trae por defecto (Static) */
+    position: fixed; /* siempre hay que cambiar la posicion del padre que trae por defecto (Static) */
     background-color: bisque;
-    left: calc(50% - 101px);
-    top: calc(50% - 330px);
+    top: 0;
+    width: 100%;
+    height: 75px;
+    /* left: calc(50% - 101px);
+    top: calc(50% - 330px); */
 } 
