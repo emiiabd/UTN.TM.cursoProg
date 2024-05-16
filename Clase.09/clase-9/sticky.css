@@ -1,0 +1,14 @@
+
+
+
+section{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+
+section img{
+    position: sticky;
+    top: 40px;
+}

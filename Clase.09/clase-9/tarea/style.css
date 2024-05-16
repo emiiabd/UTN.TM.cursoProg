@@ -1,0 +1,100 @@
+/* Boots Icon */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* font DM sans */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --ff-main:"DM Sans", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section .cards{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+.card{
+    margin: 20px;
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    border: 1px solid #673de646 ;
+    border-radius: 2%;
+    overflow: hidden;
+}
+
+.card .card-info{
+    height: 300px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+   
+    padding: 40px 30px 40px 30px;
+    position: relative;
+    gap: 20px;
+}
+
+.card .card-info .info-stars i{
+    color: #673DE6;
+    padding-left: 2px;
+
+}
+
+.card .card-info .review-text{
+    font-family: var(--ff-main);
+    font-size: 14px;
+    color: #2f1c6a;
+   
+}
+.card .card-info .history-text{
+    position: absolute;
+    bottom: 40px;
+}
+
+.card .card-info .history-text a{
+    font-family: var(--ff-main);
+    font-weight: 700;
+    color: #673DE6;
+    text-decoration: none;
+}
+
+
+.user-info{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-top: 1px solid #673de646 ;
+    background-color: #F4F5FF;
+    gap: 10px;
+}
+
+.user-info .user-pic img{
+    width: 65px;
+}
+
+.user-info .user-name{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 55px;
+}
+
+.user-info .user-name h3{
+    font-family: var(--ff-main);
+    font-size: 18px;
+    color: #2f1c6a;
+}
+
+.user-info .user-name span{
+    font-family: var(--ff-main);
+    font-weight: 250;
+    font-size: 14px;
+    color: #2f1c6a;
+}
