@@ -55,7 +55,7 @@ function calcular(operación,a,b){
 }
 
 alert(calcular('+',2,4))
- */
+*/
 
 // 6)Crea una función llamada contarHasta(número) y nos cuente hasta ese número por consola 
 /* 
