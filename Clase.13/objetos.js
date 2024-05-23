@@ -129,12 +129,12 @@ const calcularIva=(precio, tipo_factura)=>{
         precioConIVA: precio+iva,
         factura: tipo_factura
     }
-    if(tipo_factura==='B' || tipo_factura==='C'){
+    if(tipo_factura==='B'.toLowerCase() || tipo_factura==='C'.toLowerCase()){
         resultado.precioUnitario=resultado.precioConIVA
-    }else if(tipo_factura==='A'){
+    }else if(tipo_factura==='A'.toLowerCase()){
         resultado.precioUnitario=precio
     }
     return resultado
 }
 
-console.log(calcularIva(1000,'B'))
+console.log(calcularIva(1000,'a'))
