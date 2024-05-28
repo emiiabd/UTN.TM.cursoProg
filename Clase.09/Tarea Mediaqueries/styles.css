@@ -17,3 +17,38 @@
     font-family: var(--ffamily);
     
 }
+
+body{
+    background-color: var(--bg-color);
+    font-family: var(--ffamily);
+    color: var(--f-color);
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding:5px;
+}
+.presentation-box{
+    padding-top: 64px;
+}
+
+.presentation-box .info-text{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.presentation-box .info-text .txt{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.presentation-box .info-text .txt p{
+    line-height: 24px;
+}
+.presentation-box img{
+    width: 100%;
+}
