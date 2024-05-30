@@ -1,3 +1,5 @@
+// Funciones de validaciones
+
 const tieneMayus = (str) => str !== str.toLowerCase()
 
 const validarEmail = (email) => /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email)
@@ -10,7 +12,8 @@ const validarOperacion = (operacion) => operacion === '+' || operacion === '-'
 
 //                                    callback (pasar una funcion)
 //const solicitarDato =(email,password,fn_validacion)=>{
-const solicitarDato =(obj)=>{ //funcion mejorada con diccionario (DATOS)
+//funcion de solicitacion de datos mejorada con diccionario (DATOS):
+const solicitarDato =(obj)=>{ 
   let dato = prompt(obj.mensaje)
   while(!obj.validacion(dato)){
     dato = prompt(obj.error)
@@ -18,8 +21,8 @@ const solicitarDato =(obj)=>{ //funcion mejorada con diccionario (DATOS)
   return dato
 }
 
-
-const DATOS = { // Diccionario
+// Diccionario
+const DATOS = { 
   EMAIL: {
     mensaje: 'Ingrese su email',
     error: 'Email ingresado no valido',
@@ -42,12 +45,14 @@ const DATOS = { // Diccionario
     }
 }
 
+// LOGIN
 /* const login = () =>{
   const user = {
     email: null,
     password: null,
   }                                                                       //se pasa la funcion pero no se llama o ejecuta 
   //user.email = solicitarDato('Ingrese su email','Email ingresado no valido',validarEmail)
+
   user.email = solicitarDato(DATOS.EMAIL) //Solicitar datos mejorada con diccionario (DATOS)
   user.password = solicitarDato(DATOS.PASSWORD)
 
@@ -57,6 +62,7 @@ const DATOS = { // Diccionario
 
 console.log(login()) */
 
+// CALCULADORA
 const calculadora = () =>{
   const calculo = {
     operacion: null,
@@ -74,7 +80,7 @@ const calculadora = () =>{
     calculo.resultado= Number(calculo.numero1) - Number(calculo.numero2)
   }
 
-  alert(`El resulttado de ${calculo.numero1} ${calculo.operacion} ${calculo.numero2} es ${calculo.resultado}`)
+  alert(`El resulttado de ${calculo.numero1} ${calculo.operacion} ${calculo.numero2} es: ${calculo.resultado}`)
   return calculo
 }
 
