@@ -71,13 +71,13 @@ const calculadora = () =>{
     resultado: null,
   }
   calculo.operacion=solicitarDato(DATOS.OPERACION)
-  calculo.numero1=solicitarDato(DATOS.CALCULADOR)
-  calculo.numero2=solicitarDato(DATOS.CALCULADOR)
+  calculo.numero1=Number(solicitarDato(DATOS.CALCULADOR))
+  calculo.numero2=Number(solicitarDato(DATOS.CALCULADOR))
 
   if (calculo.operacion === '+'){
-    calculo.resultado= Number(calculo.numero1) + Number(calculo.numero2)
+    calculo.resultado= calculo.numero1 + calculo.numero2
   } else {
-    calculo.resultado= Number(calculo.numero1) - Number(calculo.numero2)
+    calculo.resultado= calculo.numero1 - calculo.numero2
   }
 
   alert(`El resulttado de ${calculo.numero1} ${calculo.operacion} ${calculo.numero2} es: ${calculo.resultado}`)
