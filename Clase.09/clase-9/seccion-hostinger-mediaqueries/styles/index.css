@@ -104,6 +104,10 @@
     .seccion .reseñas-contenedor{
         max-width: 80%;
     }
+
+    .subtitulo-secondary{
+        font-size: 1.7rem;
+    }
 }
 
 
