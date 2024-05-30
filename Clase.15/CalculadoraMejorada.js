@@ -1,15 +1,16 @@
-// Funciones de validaciones
+// Funciones 
 
 const tieneMayus = (str) => str !== str.toLowerCase()
 
 const validarEmail = (email) => /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email)
-
+//                                    valida que el dato ingresado sea truthy
 const validarPassword = (password) => password && password.length>6 && tieneMayus(password)
 
 const validarNumero = (numero) => !isNaN(numero)
 
-const validarOperacion = (operacion) => operacion === '+' || operacion === '-'
+const validarOperacion = (operacion) => OPERADORES.hasOwnProperty(operacion)
 
+const operacion = (operador, numero1, numero2) => OPERADORES[operador](numero1, numero2)
 //                                    callback (pasar una funcion)
 //const solicitarDato =(email,password,fn_validacion)=>{
 //funcion de solicitacion de datos mejorada con diccionario (DATOS):
@@ -22,7 +23,13 @@ const solicitarDato =(obj)=>{
 }
 
 // Diccionario
-const DATOS = { 
+const OPERADORES = {
+  '+': (numero1, numero2) => numero1 + numero2,
+  '-': (numero1, numero2) => numero1 - numero2,
+  '*': (numero1, numero2) => numero1 * numero2,
+}
+const DATOS = {
+  
   EMAIL: {
     mensaje: 'Ingrese su email',
     error: 'Email ingresado no valido',
@@ -31,7 +38,7 @@ const DATOS = {
   PASSWORD: {
     mensaje: 'Ingrese su contraseña',
     error: 'Contraseña ingresada no valida, tienen que contener al menos 6 palabras y una letra mayuscula',
-    validacion: validarPassword
+    validacion: validarPassword,
   },
   CALCULADOR: {
     mensaje: 'Ingrese un numero',
@@ -39,11 +46,12 @@ const DATOS = {
     validacion: validarNumero,
   },
   OPERACION: {
-    mensaje: 'Ingrese la operacion que quiere realizar (+ o -)',
-    error: 'La operacion seleccionada no esta disponible, ingrese nuevamente (+ o -)',
+    mensaje: `Ingrese la operacion que quiere realizar (${Object.keys(OPERADORES)})`,
+    error: `La operacion seleccionada no esta disponible, ingrese nuevamente (${Object.keys(OPERADORES)})`,
     validacion: validarOperacion,
     }
 }
+
 
 // LOGIN
 /* const login = () =>{
@@ -73,12 +81,7 @@ const calculadora = () =>{
   calculo.operacion=solicitarDato(DATOS.OPERACION)
   calculo.numero1=Number(solicitarDato(DATOS.CALCULADOR))
   calculo.numero2=Number(solicitarDato(DATOS.CALCULADOR))
-
-  if (calculo.operacion === '+'){
-    calculo.resultado= calculo.numero1 + calculo.numero2
-  } else {
-    calculo.resultado= calculo.numero1 - calculo.numero2
-  }
+  calculo.resultado= operacion(calculo.operacion, calculo.numero1, calculo.numero2)
 
   alert(`El resulttado de ${calculo.numero1} ${calculo.operacion} ${calculo.numero2} es: ${calculo.resultado}`)
   return calculo
