@@ -1,0 +1,34 @@
+:root {
+    --bg-color: #673de6;
+    --bg-color-box: #5025d1;
+    --ffamily: "DM Sans", sans-serif;
+    --f-color: #fff;
+}
+/* Normalizacion */
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+ul{
+    list-style-type: none;
+}
+/* Titulos */
+.subtitles {
+    font-size: 1.5rem;
+    line-height: 32px;
+}
+.texts{
+    font-size: 1rem;
+}
+/* lista */
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.list li{
+    display: flex;
+    gap: 5px;
+}
