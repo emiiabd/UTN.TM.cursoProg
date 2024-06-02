@@ -52,6 +52,8 @@ const DATOS = {
     }
 }
 
+const HISTORIAL = []
+
 
 // LOGIN
 /* const login = () =>{
@@ -81,10 +83,11 @@ const calculadora = () =>{
   calculo.operacion=solicitarDato(DATOS.OPERACION)
   calculo.numero1=Number(solicitarDato(DATOS.CALCULADOR))
   calculo.numero2=Number(solicitarDato(DATOS.CALCULADOR))
-  calculo.resultado= operacion(calculo.operacion, calculo.numero1, calculo.numero2)
+  calculo.resultado= OPERADORES[calculo.operacion](calculo.numero1, calculo.numero2)
 
   alert(`El resultado de ${calculo.numero1} ${calculo.operacion} ${calculo.numero2} es: ${calculo.resultado}`)
-  return calculo
+  return HISTORIAL.push(calculo)
 }
 
 console.log(calculadora())
+console.log(HISTORIAL)
