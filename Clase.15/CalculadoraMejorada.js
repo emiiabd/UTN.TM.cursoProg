@@ -10,7 +10,6 @@ const validarNumero = (numero) => !isNaN(numero)
 
 const validarOperacion = (operacion) => OPERADORES.hasOwnProperty(operacion)
 
-const operacion = (operador, numero1, numero2) => OPERADORES[operador](numero1, numero2)
 //                                    callback (pasar una funcion)
 //const solicitarDato =(email,password,fn_validacion)=>{
 //funcion de solicitacion de datos mejorada con diccionario (DATOS):
