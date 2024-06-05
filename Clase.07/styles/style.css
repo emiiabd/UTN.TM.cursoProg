@@ -10,7 +10,8 @@
 }
 
 .contenedor{
-    /* Esto se utiliza para que el tamano de la caja no se mueva por el margin y el border, ya que lo estas definiendo desde el border-box y no desde el content box (por defecto) */
+    /* Esto se utiliza para que el tamano de la caja no se mueva por el margin y el border, ya que lo estas definiendo desde el border-box(no se puede sobrepasar) y no desde 
+    el content box (por defecto), padding, border, etc. se suman al tamaño de la caja */
     box-sizing: border-box;
     width: 200px;
     height: 200px;  
@@ -30,7 +31,7 @@
     propiedad: <eje y> <eje x> <buttom>
     propiedad: <eje y> <eje x> <buttom> <left>
     */
-    margin: 100px;
+    margin: 100px; /* Margen de una caja */
 
     /* El ajuste de los lados siempre se hace en sentido horario */
     padding: 15px 32px 28px 40px; 
@@ -95,7 +96,7 @@ a:hover{
 .b-cont{
     width: 344px;
     display: flex;
-    align-items: center;
+    align-items: center; /* Alineacion eje y */
     position: relative;
 }
 

@@ -25,7 +25,7 @@ const solicitarDato =(obj)=>{
 const OPERADORES = {
   '+': (numero1, numero2) => numero1 + numero2,
   '-': (numero1, numero2) => numero1 - numero2,
-  '*': (numero1, numero2) => numero1 * numero2,
+//  '*': (numero1, numero2) => numero1 * numero2,
 }
 const DATOS = {
   
@@ -50,9 +50,18 @@ const DATOS = {
     validacion: validarOperacion,
     }
 }
+////////////// HISTORIAL--
 
-const HISTORIAL = []
+if(localStorage.getItem('historial') === null){
+  localStorage.setItem('historial', JSON.stringify([]))
+}
+const obtenerHistorial = () => JSON.parse(localStorage.getItem('historial'))
 
+const guardarHistorial = (obj) =>{
+  const historial= obtenerHistorial()
+  historial.push(obj)
+  return localStorage.setItem('historial',JSON.stringify(historial))
+}
 
 // LOGIN
 /* const login = () =>{
@@ -69,11 +78,13 @@ const HISTORIAL = []
   return user
 }
 
-console.log(login()) */
+localStorage.setItem('user',JSON.stringify(login()))
+//console.log(JSON.parse(localStorage.getItem('user'))) */
 
 // CALCULADORA
 const calculadora = () =>{
   const calculo = {
+    accion: 'calculadora',
     operacion: null,
     numero1: null,
     numero2: null,
@@ -85,10 +96,28 @@ const calculadora = () =>{
   calculo.resultado= OPERADORES[calculo.operacion](calculo.numero1, calculo.numero2)
 
   alert(`El resultado de ${calculo.numero1} ${calculo.operacion} ${calculo.numero2} es: ${calculo.resultado}`)
-  return HISTORIAL.push(calculo)
+  return guardarHistorial(calculo)
 }
 
-console.log(calculadora())
-console.log(HISTORIAL)
+//calculadora()
 
-////////////// HISTORIAL--
+
+//////////// Renderizar historial
+const renderizarHistorial = () =>{
+  //const historial = JSON.parse(localStorage.getItem('historial'))
+  const historial = obtenerHistorial()
+  let listaHistorial = `` //Variable lista siempre adentro, si no en el programa se van a generar dos listas a la hora de guardar una nueva lista recorriendo el programa
+  for(let obj of historial){
+    listaHistorial = listaHistorial + `
+    Accion: ${obj.accion}
+    Operacion: ${obj.operacion}
+    Numeros: ${obj.numero1}, ${obj.numero2}
+    Resultado: ${obj.resultado}
+    `
+  }
+  return listaHistorial
+}
+
+alert(renderizarHistorial())
+console.log(renderizarHistorial())
+console.log(Date())

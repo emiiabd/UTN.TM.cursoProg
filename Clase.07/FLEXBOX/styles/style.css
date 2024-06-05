@@ -1,31 +1,38 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
+* { /* Selector universal */
+    margin: 0; /* Margen de cualquier elemento 0 */
+    padding: 0; /* Padding de cualquier elemtno 0 */
+    box-sizing: 0; /* se utiliza para cuando definis el ancho y el alto de la caja, es una medida especifica, border-box (no puede sobredimensionarse por ningun estilo ya sea paddin, border, etc) 
+                        o una medida relativa, content-box (cuando colocamos esta propiedad, la caja del contenido, lo de adentro, no se modificara pero si le agregamos propiedades como:
+                        padding, border, etc. a la caja se le sumara por el lado externo estas propiedades */
+
+                        /* Note: It is often useful to set box-sizing to border-box to lay out elements. This makes dealing with the sizes of elements much easier, and generally eliminates a number of
+                        pitfalls you can stumble on while laying out your content. On the other hand, when using position: relative or position: absolute, use of box-sizing: content-box allows the 
+                        positioning values to be relative to the content, and independent of changes to border and padding sizes, which is sometimes desirable. */
 }
 
 .padre{
     background-color: green;
     width: 100vw; /* Viewport width, son medidas relativas a la dimensiones del viewport*/
     height: 100vh; /* Viewport height */
-    display: flex;
+    display: flex; /*  */
     flex-direction: row;
     flex-wrap: nowrap;
-    /* gap: espaciado entre hijos */
-    gap: 30px;
-    /* justify-content movimiento en el eje x, no siempre en el medio (despues lo vamos a ver) */
-    /* la propiedad:
+    gap: 30px; /* espaciado entre hijos */
+    
+    /* justify-content: movimiento en el eje x,  
+    la propiedad:
     space-between: divide el espacio restante que queda en el padre y lo divide entre el medio de los hijos, espacio / ctidad hijos -1
     space-evelyn: espacio / ctidad hijos +1
     space-around: espacio / ctidad hijos
     */
     justify-content: space-evenly;
-    /* aling-item movimiento del eje y de los elementos */
-    align-items: center;
+    align-items: center; /* movimiento del eje y de los elementos */
 
 }
 
+/* display: inherit; -- le dice que tome el valor del padre como valor del display 
+   display: initial; -- refuerza que tome el valor inicial del elemento */
 .padre .hijo{
     background-color: red;
     width: 200px;
