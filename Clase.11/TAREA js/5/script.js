@@ -9,7 +9,10 @@ let temp = prompt('Ingrese una temperatura en grados Celsius: ')
 }else if(temp>=100){
     console.log('Gaseoso')
 } */
-if (!temp || isNaN(temp)){
+
+////////////////////
+
+/* if (!temp || isNaN(temp)){
     alert('Temperatura no valida')
 }else if (temp<1){
     console.log('Solido')
@@ -17,4 +20,8 @@ if (!temp || isNaN(temp)){
     console.log('Liquido')
 }else if(temp>=100){
     console.log('Gaseoso')
-} 
+}  */
+
+//////////////////
+/* Utilizando funciones, y arrays */
+

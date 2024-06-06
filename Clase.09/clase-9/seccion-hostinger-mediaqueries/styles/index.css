@@ -1,9 +1,10 @@
+/* Importacion del resto de archivos.css */
 @import url('./imports.css');
 @import url('./normalize.css');
 @import url('./variables.css');
 @import url('./font.css');
 
-
+/* archivo de modificacion de css para la pagina web */
 
 .bg-primary{
     background-color: var(--primary-color);
@@ -23,7 +24,7 @@
 
 .lista li{
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
 /* Secciones */
@@ -35,7 +36,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    align-items: center;
+    align-items: center; 
 }
 
 .seccion .seccion-cabecera{
@@ -43,12 +44,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 540px;
 }
 
 .seccion .reseñas-contenedor{
     padding: 0 16px;
-    max-width: 540px;
     width: 100%;
 }
 

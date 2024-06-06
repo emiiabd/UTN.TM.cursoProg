@@ -1,4 +1,6 @@
-*{
+/* Archivo css que solo contiene las modificaciones, clases y normalizaciones de los textos paraluego ser importado en el index.css*/
+
+*{ 
     font-family: var(--ff-text);
 }
 

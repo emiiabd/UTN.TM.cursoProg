@@ -6,16 +6,21 @@
 .padre{
     display: flex;
     height: 100vh;
-    flex-direction: column;
+    flex-direction: column; /* Al colocarlo en columans los ejes x,y se rotan quedando y (horizontal), x (vertical) */
     background-color: green;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Movimiento eje x (cuando esta en row)*/
+    align-items: center; /* Movimiento eje y (cuando esta en row)*/
+    gap: 5px;
 }
 
 .hijo{
     width: 200px;
     height: 200px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: brown;
     border: 1px solid black;
+}
+
+.hijo:nth-child(3){
+    background-color: bisque;
 }

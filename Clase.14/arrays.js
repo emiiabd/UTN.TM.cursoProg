@@ -115,7 +115,7 @@ for(let nombre of array){
 }
 console.log(nombresEnMayusculas) */
 
-const productos = [
+const productos = [   /* array de objetos */
     {
         title: 'tv samsung 32"',
         price: 3000,
