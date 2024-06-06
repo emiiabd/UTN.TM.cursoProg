@@ -47,7 +47,7 @@ const guardarHistorial = (obj) =>{
 }
 
 const renderizarHistorial = () =>{ //declaramos funcion
-  //const historial = JSON.parse(localStorage.getItem('historial'))
+  // const historial = JSON.parse(localStorage.getItem('historial'))
   const historial = obtenerHistorial() //declaramos una cadena array de objetos
   let stringHistorial = `` // una variable vacia para crear la acumulacion
   for(let obj of historial){ // por cada elemento (obj) del array historial (cadena de objetos)
