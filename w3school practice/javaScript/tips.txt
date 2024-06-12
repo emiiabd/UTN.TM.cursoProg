@@ -1,0 +1,37 @@
+
++ Good Practices /////
+
+//-- Some of the good practice to do into the javaScript code is:
+
+> Put the fucking space's around of operators ( = + - * / ) like: let suma = x + y;
+
+> Place the element <script> into the body elemnt and on the bottom of this one in our html file, we using like that because when the computer will load the visual of the web page, 
+  it will be more faster.
+
+> Is highly recommended use the semicolons (punto y coma) in the end of any statement into of the javaScript code. It's also not necessary but still recommended.
+
+> Is a very good practice to always declare the variables befor use. Note:
+  * The var keyword should be used only when you write code for older browser
+
+> All the variables must be indentified with *unique names*
+  * they are case-sensitive
+  * they can start with $ and _
+  * they names should start with a letter
+  * Reserved words of JavaScript aren't available to used
+
+> It's very good practice to declare all variables at the beginning of a script
+
+
++ Some keywords of JavaScript /////
+> let      : Declare a block variable
+> var      : Declare a variable
+> const    : Declare a block constant
+> if       : Marks a block of statements to be executed on a condition
+> swich    : Marks a block of statements to be executed in different cases
+> for      : Marks a block of statements to be executed in a loop
+> function : Declare a function
+> return   : Exits a funcition
+> try      : Implements error handling to a block of statemetns
+
+
+
