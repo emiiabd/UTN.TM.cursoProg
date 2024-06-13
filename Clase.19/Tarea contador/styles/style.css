@@ -1,0 +1,67 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-color: #D8EFD3;
+  --bgSecondary-color: #95D2B3;
+  --text-color: #474747;
+  --border-color: #55AD9B;
+  --border2-color: #F1F8E8;
+}
+
+.contador button {
+  display: border-box;
+  outline: none;
+  border: none;
+  background-color: #FFF2D7;
+  font-size: 35px;
+  height: 38px;
+  border-radius: 5px;
+}
+
+.contador i{
+  color: var(--text-color);
+}
+
+.comprar button{
+  padding: 5px;
+  background-color: #FFF2D7;
+  border: 2px solid var(--text-color);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+body{
+  background-color: var(--bg-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  padding: 12px;
+  background-color: var(--bgSecondary-color);
+  height: 15vh;
+  width: 50vw;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--text-color);
+  border-radius: 15px;
+}
+
+.text{
+  color: var(--text-color);
+  font-size: 26px;
+  font-weight: 500;
+}

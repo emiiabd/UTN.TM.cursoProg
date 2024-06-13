@@ -34,4 +34,41 @@
 > try      : Implements error handling to a block of statemetns
 
 
++ Operators in JavaScript
+
+//-- Arithmetich operators
+>   +
+>   -
+>   *
+>   **
+>   /
+>   %
+>   ++
+>   --
+
+//-- Assignment operators
+>   =
+>   +=
+>   -=
+>   *=
+>   /=
+>   %=
+>   **=
+
+//-- Comparison operators
+>   == 
+>   ===  
+>   != not equal
+>   !== not equal value and type
+>   '>' without ''
+>   '<'  
+>   '>='
+>   '<='
+>   ?
+
+//-- Logical operators
+>   &&
+>   ||
+>   !
+
 
