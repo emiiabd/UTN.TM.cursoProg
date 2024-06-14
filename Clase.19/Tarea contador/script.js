@@ -12,22 +12,20 @@ comprarHTML.style.display = 'flex';
 let numero = 1;
 
 ////// FUNCTIONS
-const compra = ()=>{
+const renderizarContador = ()=> numeroHTML.innerText = numero;
+
+const handleCompra = ()=>{
   contadorHTML.style.display = "flex";
   comprarHTML.style.display = "none";
   renderizarContador();
 };
 
-const renderizarContador = ()=>{
-  numeroHTML.innerText = numero;
-};
-
-const incremento = ()=>{
+const handleIncremento = ()=>{
   numero++;
   renderizarContador();
 };
 
-const decremento = ()=>{
+const handleDecremento = ()=>{
   if(numero <= 1){
     contadorHTML.style.display = 'none';
     comprarHTML.style.display = 'flex';
@@ -38,7 +36,7 @@ const decremento = ()=>{
 };
 
 ////// EVENTS
-botonComprarHTML.addEventListener('click', compra);
-botonIncrementoHTML.addEventListener('click', incremento);
-botonDecrementoHTML.addEventListener('click', decremento);
+botonComprarHTML.addEventListener('click', handleCompra);
+botonIncrementoHTML.addEventListener('click', handleIncremento);
+botonDecrementoHTML.addEventListener('click', handleDecremento);
 
