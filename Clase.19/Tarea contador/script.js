@@ -1,4 +1,4 @@
-////// DOM OBJECTS
+////// DOM ELEMENTS
 const botonIncrementoHTML = document.querySelector('.botonIncremento');
 const botonDecrementoHTML = document.querySelector('.botonDecremento');
 const botonComprarHTML = document.querySelector('.comprar-btn');
