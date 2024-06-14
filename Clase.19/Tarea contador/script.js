@@ -15,8 +15,8 @@ let numero = 1;
 const renderizarContador = ()=> numeroHTML.innerText = numero;
 
 const handleCompra = ()=>{
-  contadorHTML.style.display = "flex";
-  comprarHTML.style.display = "none";
+  contadorHTML.style.display = 'flex';
+  comprarHTML.style.display = 'none';
   renderizarContador();
 };
 
