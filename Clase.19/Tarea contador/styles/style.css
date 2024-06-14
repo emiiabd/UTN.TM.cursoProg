@@ -15,17 +15,19 @@
 }
 
 .contador button {
-  display: border-box;
+  display: content-box;
   outline: none;
   border: none;
   background-color: #FFF2D7;
-  font-size: 35px;
-  height: 38px;
+  font-size: 30px;
+  height: 29px;
   border-radius: 5px;
 }
 
 .contador i{
   color: var(--text-color);
+  position: relative;
+  top: -1.5px;
 }
 
 .comprar button{
@@ -33,7 +35,7 @@
   background-color: #FFF2D7;
   border: 2px solid var(--text-color);
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 500;
   color: var(--text-color);
 }
@@ -48,10 +50,10 @@ body{
 }
 
 .content{
-  padding: 12px;
+  padding: 20px;
   background-color: var(--bgSecondary-color);
-  height: 15vh;
-  width: 50vw;
+  height: 30%;
+  width: 100%;
   flex-direction: row;
   gap: 12px;
   justify-content: center;
@@ -62,6 +64,6 @@ body{
 
 .text{
   color: var(--text-color);
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 500;
 }
