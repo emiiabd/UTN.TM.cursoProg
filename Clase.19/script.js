@@ -6,7 +6,16 @@ document.querySelector('.btn-3').addEventListener('click', alertar)
 
 
 
-/* const limpiarError = ()=>{
+/* 
+const msjError = () => {errorHTML.innerText = "Error, no se puede decrementar a menos de cero";errorHTML.style.color = "red"};
+
+const limpiarError = ()=>{
+  if(errorHTML.innerText){
+    errorHTML.innerText = '';
+  };
+};
+
+const limpiarError = ()=>{
   if(errorHTML.innerText){
     errorHTML.innerText = ''
   }

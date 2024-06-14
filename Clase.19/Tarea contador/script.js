@@ -12,14 +12,6 @@ comprarHTML.style.display = 'flex';
 let numero = 1;
 
 ////// FUNCTIONS
-const msjError = () => {errorHTML.innerText = "Error, no se puede decrementar a menos de cero";errorHTML.style.color = "red"};
-
-const limpiarError = ()=>{
-  if(errorHTML.innerText){
-    errorHTML.innerText = '';
-  };
-} ;
-
 const compra = ()=>{
   contadorHTML.style.display = "flex";
   comprarHTML.style.display = "none";
