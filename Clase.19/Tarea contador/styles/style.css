@@ -19,6 +19,7 @@ button{
   background-color: #FFF2D7;
   border-radius: 5px;
 }
+
 .contador button {
   display: content-box;
   outline: none;
