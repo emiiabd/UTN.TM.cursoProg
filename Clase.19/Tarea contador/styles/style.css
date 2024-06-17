@@ -14,14 +14,17 @@
   --border2-color: #F1F8E8;
 }
 
+button{
+  cursor: pointer;
+  background-color: #FFF2D7;
+  border-radius: 5px;
+}
 .contador button {
   display: content-box;
   outline: none;
   border: none;
-  background-color: #FFF2D7;
   font-size: 30px;
   height: 29px;
-  border-radius: 5px;
 }
 
 .contador i{
@@ -32,9 +35,7 @@
 
 .comprar button{
   padding: 5px;
-  background-color: #FFF2D7;
   border: 2px solid var(--text-color);
-  border-radius: 8px;
   font-size: 25px;
   font-weight: 500;
   color: var(--text-color);

@@ -71,4 +71,16 @@
 >   ||
 >   !
 
++ JavaScript Data Types
+
+//-- Java script has 8 differents data Types
+
+> String
+> Boolean
+> Number
+> Bigint 
+> Undefined
+> Null
+> Symbol
+> Object
 
