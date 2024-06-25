@@ -28,14 +28,12 @@ formHTML.addEventListenner('submit',  handleSubmit) */
 
 const formHTML = document.getElementById("formHTML");
 
-
 const handleSubmit = async (event) =>{
   event.preventDefault();
-
   const titleHTML = document.getElementById("titleForm").value;
   const bodyHTML = document.getElementById("bodyForm").value;
 
-  const formData = {
+  const formValue = {
     title: `${titleHTML}`,
     body: `${bodyHTML}`,
     userId: 1,
@@ -43,9 +41,9 @@ const handleSubmit = async (event) =>{
 
   const sendData = await fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
-    body: JSON.stringify({formData}),
+    body: JSON.stringify(formValue),
     headers: {
-        'Content-type': 'application/json; charset=UTF-8',
+      'Content-type': 'application/json; charset=UTF-8',
     },
   });
 
