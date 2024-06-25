@@ -129,6 +129,7 @@ const calcularIva=(precio, tipo_factura)=>{
         precioConIVA: precio+iva,
         factura: tipo_factura
     }
+    delete resultado.iva
     if(tipo_factura==='B'.toLowerCase() || tipo_factura==='C'.toLowerCase()){
         resultado.precioUnitario=resultado.precioConIVA
     }else if(tipo_factura==='A'.toLowerCase()){

@@ -1,0 +1,190 @@
+
++ Good Practices +
+
+//-- Some of the good practice to do into the javaScript code is:
+
+> Put the fucking space's around of operators ( = + - * / ) like: let suma = x + y;
+
+> Place the element <script> into the body elemnt and on the bottom of this one in our html file, we using like that because when the computer will load the visual of the web page, 
+  it will be more faster.
+
+> Is highly recommended use the semicolons (punto y coma) in the end of any statement into of the javaScript code. It's also not necessary but still recommended.
+
+> Is a very good practice to always declare the variables befor use. Note:
+  * The var keyword should be used only when you write code for older browser
+
+> All the variables must be indentified with *unique names*
+  * they are case-sensitive
+  * they can start with $ and _
+  * they names should start with a letter
+  * Reserved words of JavaScript aren't available to used
+
+> It's very good practice to declare all variables at the beginning of a script
+
+
++ Some keywords of JavaScript +
+
+let      : Declare a block variable
+var      : Declare a variable
+const    : Declare a block constant
+if       : Marks a block of statements to be executed on a condition
+swich    : Marks a block of statements to be executed in different cases
+for      : Marks a block of statements to be executed in a loop
+function : Declare a function
+return   : Exits a funcition
+try      : Implements error handling to a block of statemetns
+
+
++ Operators in JavaScript +
+
+//-- Arithmetich operators
+
++
+-
+*
+**
+/
+%
+++
+--
+
+//-- Assignment operators
+
+=
++=
+-=
+*=
+/=
+%=
+**=
+
+//-- Comparison operators
+
+== 
+===  
+!= not equal
+!== not equal value and type
+'>'   without ''
+'<'   without ''
+'>='  without ''
+'<='  without ''
+?
+
+//-- Logical operators
+>   &&
+>   ||
+>   !
+
++ JavaScript Data Types +
+
+//-- Java script has 8 differents data Types
+
+String
+Boolean
+Number
+Bigint 
+Undefined
+Null
+Symbol
+Object
+  * The object data type can contain both built-in object and user defined objects, for example:
+    objects, arrays, dates, maps, sets, intarrays, floatarrays, promises, and more.
+
+> A JavaScript variable can hold any type of data.
+> JavaScript evaluates expressions from the left to right, and when your are adding a number and a string, it will treat the number as string
+> JavaScript Types are Dynamic: it means that you can use the same variable with a differents types of data (string, number, boolean, etc.)
+> Javascript numbers are always one type: double (64-bit floating point).
+
+//- The typeof Operators
+
+You can use the 'typeof' operator to find the type of a JavaScript variable, for example:
+  -typeof "John"         // Returns "string"
+  -typeof (3 + 4)        // Returns "number"
+  -typeof 0              // Returns "number"
+
++ JavaScript Functions +
+
+Why functions??
+We can reuse code, we can write code that can be used many times, we can use the same code and get diferents results (with the parameters)
+
+function myFunction(a,b){
+  return a+b;
+}
+
+> The functions parameters are defined inside of the parentheses (parameter1,paremeter2,...) in the function definition (inside the function the arguments (parameters) are local variables)
+> Functions arguments are the values recived by the function declaration example: myFunction(1,2)
+
+//- Functions invocations (calls)
+The () operator invokes (calls) the functions, example: myFunction()
+
+The functions are invokes when "something" call the function, we have different kinds of way to call the function:
+> When an events occurs (whe a user click a button)
+> When it is invoked from javaScript code
+> Automatically (self invoked)
+
++ JavaScript Objects +
+In JavaScript, almost "everything" is an object.
+
+> Objects are objects
+> Maths are objects
+> Functions are objects
+> Dates are objects
+> Arrays are objects
+> Maps are objects
+> Sets are objectss
+
+All JavaScript values, except primitives, are objects.
+
+//- Creating a object
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+//- Objects properties
+The named values, in JavaScript objects are called properties
+'Property      Value'
+firstName     John
+
+Objects written as name values pairs are similar to:
+> Associative arrays in PHP
+> Dictionaries in Python
+> Hash tables in C
+> Hash maps in Java
+> Hashes in Ruby and Perl
+
+//- Accessing Objects properties
+You can access object properties in two ways:
+> person.firstName
+> person["firstName"]
+
+//- JavaScript Primitives
+
+A primitive data type that has a primitive value, JavaScript has 7 types of primitive data type:
+> string
+> number
+> boolean
+> null
+> Undefined
+> Symbol
+> bigint
+
+Immutable: Primitives values are Immutable (The are hardcoded and cannot be changed)
+if x = 3.14, you can changed the value of x but you cannot change the value of 3.14
+
+//- JavaScript Objects are mutable
+Objects are mutable: they are addressed by reference, not by value
+Example:
+
+//Create an Object
+const person = {
+  firstName:"John",
+  lastName:"Doe",
+  age:50, eyeColor:"blue"
+}
+
+// Create a copy
+const x = person;
+
+// Change Age in both
+x.age = 10;
+
+> The object "x" is not a copy of "person", the object "x" is "person". It's because they are alocated in the same space of the memory and any change that you made to the "x" object will change
+also the "person" object

@@ -43,6 +43,7 @@ const usuario = {
 }
 const mostrar_usuario = document.getElementById("usuario")
 
+
 usuario.innerHTML = `
 <h2>nombre : ${usuario.nombre}<h2>
 <h2>apellido : ${usuario.apellido}<h2>
