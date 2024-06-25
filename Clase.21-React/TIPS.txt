@@ -1,0 +1,9 @@
++ NODE JS Y REACT
+
+> Las dependencias y las devDependencias son una lista de paquetes que debemos instalar para que el proyecto funcione correctamente.
+> Cuando se instalan las dependencias, se realizara en una carpeta llamada node_modules
+
+>> PARA INSTALAR LAS DEPENDENCIAS, DEBEMOS: ejecutar npm installl
+  Al finalizar, se crea tambien un archivo package-loc.json (NO SE TOCA)
+
+>> Para ejecutar el script usamos: npm run <script-name>, nosotros, "npm run dev"
