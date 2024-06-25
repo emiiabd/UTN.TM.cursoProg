@@ -2,7 +2,7 @@ import React from "react";
 import { nombre as name, persona as person } from "./funciones";
 import { Button } from "./components/Boton";
 import Carta from "./components/Carta";
-
+import RowArticle from "./components/RowArticle";
 
 /* Los archivos .jsx permiten la sintaxis JSX (html) */
 
@@ -32,6 +32,10 @@ const App = ()=>{
       <h3>{obtenerRandom()}</h3>
       <Button texto={'Agregar a favoritos'} edad={'19'}/> {/* Esto se llama props, se le pasa un parametro a la funcion como un atributo */}
       <Carta />
+
+      <RowArticle title={'Lift-off: The MDN Curriculum launch'} date={'4 months ago'} auth={'developer.mozilla.org'}/>
+      <RowArticle title={"Baseline's evolution on MDN"} date={'7 months ago'} auth={'developer.mozilla.org'}/>
+      <RowArticle title={'Introducing the MDN Playground: Bring your code to life!'} date={'a year ago'} auth={'developer.mozilla.org'}/>
       </div>
     </>
   )
