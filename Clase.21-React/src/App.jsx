@@ -3,6 +3,7 @@ import { nombre as name, persona as person } from "./funciones";
 import { Button } from "./components/Boton";
 import Carta from "./components/Carta";
 import RowArticle from "./components/RowArticle";
+import sumar, {restar} from "./variables";
 
 /* Los archivos .jsx permiten la sintaxis JSX (html) */
 
@@ -13,6 +14,9 @@ import RowArticle from "./components/RowArticle";
     </div>
   )
 }; */
+
+console.log(sumar(2,6));
+console.log(restar(2,6));
 
 const App = ()=>{
   console.log(name)
