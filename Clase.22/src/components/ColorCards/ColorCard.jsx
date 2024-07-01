@@ -1,5 +1,5 @@
 import React from 'react';
-import Card,{CardColorRender} from './Card';
+import Card,{CardColorRender} from '../Card/Card';
 
 
 const ColorCard = (cards) => {
