@@ -188,3 +188,33 @@ x.age = 10;
 
 > The object "x" is not a copy of "person", the object "x" is "person". It's because they are alocated in the same space of the memory and any change that you made to the "x" object will change
 also the "person" object
+
++ Object Constructor Functions +
+
+Sometimes we need to create many objects of the name type. To create an Object Type we use an object constructor type.
+It's considered good practice to name constructor functions wit a uppper case first letter
+
+// Object Type person():
+
+> In the constructor function, this has no value. The value of this will become the new object when a new object is created
+function Person(first, last, age, eye){
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.colorEye = eye;
+}
+
+// Now we can use new Person() to create many new person Objects:
+
+const myFather = new Person("John", "Doe", 50, "blue");
+const myTripin = new Person("Trip", "Abd", 24, "brown");
+
++ HTML events +
+
+// Common HTML events
+- onchange      -> An HTML element has benn changed
+- onclick       -> The user click an HTML element
+- onmouseover   -> The user moves the mouse over an HTML element
+- onmouseout    -> The user moves the mouse away from an HTML element
+- onkeydown     -> The user pushes a keyboard key
+- onload        -> The browser has finished loading the page
