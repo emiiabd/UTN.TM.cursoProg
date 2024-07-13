@@ -1,0 +1,14 @@
+.chatbot{
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+button{
+  border: none;
+  background-color: transparent;
+}
+

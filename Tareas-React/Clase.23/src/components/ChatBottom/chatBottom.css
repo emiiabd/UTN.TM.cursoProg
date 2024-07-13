@@ -1,0 +1,33 @@
+.chatBottom{
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: solid 1px #0071B7;
+  border-top: none;
+}
+
+.chatBottom button{
+  font-size: 20px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.chatBottom button:hover{
+  cursor: pointer;
+  background-color: rgb(201, 229, 253);
+  transition: 200ms ease-in-out;
+}
+
+.chatBottom input{
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+}
