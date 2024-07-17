@@ -1,9 +1,12 @@
 import React from 'react';
 import './chatWindows.css';
+
 const ChatWindows = ({DATA_MOOK}) => {
-  const renderChat = (item,classType) =>{
-    return(
-      <div key={(item.id)} className={classType}>
+
+  const mapping = DATA_MOOK.map((item) => {
+    const render = item.author == 'pepe' ? 'leftRender' : 'rigthRender';
+    return (
+      <div key={(item.id)} className={render}>
         <p>{item.content} </p>
         <div className="state">
           <span>
@@ -15,11 +18,6 @@ const ChatWindows = ({DATA_MOOK}) => {
         </div>
       </div>
     );
-  };
-
-  const mapping = DATA_MOOK.map((item) => {
-    const render = item.author == 'pepe' ? 'leftRender' : 'rigthRender';
-    return renderChat(item, render);
   });
 
   return (

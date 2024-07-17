@@ -1,12 +1,9 @@
 import React from 'react';
-import ChatWindows from '../ChatWindows/ChatWindows';
-import ChatTop from '../ChatTop/ChatTop';
+import { ChatTop, ChatWindows, ChatBottom } from '../index';
 import './Chatbot.css';
-import ChatBottom from '../ChatBottom/ChatBottom';
 
 const Chatbot = ({title, DATA_MOOK, handleSubmit}) => {
   
-
   return (
     <div className='chatbot'>
       <ChatTop title={title}/>

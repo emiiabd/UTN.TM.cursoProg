@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Chatbot from './components/Chatbot/Chatbot';
+import { Chatbot } from './components/index';
 import DATA_MOOK from './data/DATA_MOOK';
 
 function App() {

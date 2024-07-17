@@ -15,7 +15,6 @@
   margin-right: 10%;
   width: auto;
   color: #fff;
-  position: relative;
   align-self: flex-start;
   border-radius: 5px;
   border-top-left-radius: 0;
@@ -26,7 +25,6 @@
   width: auto;
   margin-left: 10%;
   background-color: #fff;
-  position: relative;
   align-self: flex-end;
   border-radius: 5px;
   border-top-right-radius: 0;

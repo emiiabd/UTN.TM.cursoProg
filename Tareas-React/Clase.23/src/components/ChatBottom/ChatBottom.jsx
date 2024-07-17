@@ -4,6 +4,7 @@ import './chatBottom.css';
 const ChatBottom = ({handleSubmit}) => {
 
   const [msj, setMsj] = useState('');
+  
   const handleChangeOnValue = (e) => {
     setMsj(e.target.value);
   };
