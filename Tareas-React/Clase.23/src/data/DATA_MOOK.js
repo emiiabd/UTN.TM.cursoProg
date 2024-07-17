@@ -29,4 +29,4 @@ const DATA_MOOK = [
   },
 ];
 
-export default DATA_MOOK
+export default DATA_MOOK;

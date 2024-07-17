@@ -1,5 +1,5 @@
-import React from 'react'
-import './chatWindows.css'
+import React from 'react';
+import './chatWindows.css';
 const ChatWindows = ({DATA_MOOK}) => {
   const renderChat = (item,classType) =>{
     return(
@@ -14,20 +14,13 @@ const ChatWindows = ({DATA_MOOK}) => {
           </span>
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   const mapping = DATA_MOOK.map((item) => {
-    if(item.author == 'pepe'){
-      return(
-        renderChat(item,'leftRender')
-      )
-    }else{
-      return(  
-        renderChat(item,'rigthRender')
-      )
-    }
-  }) 
+    const render = item.author == 'pepe' ? 'leftRender' : 'rigthRender';
+    return renderChat(item, render);
+  });
 
   return (
     <>
@@ -35,7 +28,7 @@ const ChatWindows = ({DATA_MOOK}) => {
       {mapping}
     </div>
     </>
-  )
-}
+  );
+};
 
-export default ChatWindows
+export default ChatWindows;
