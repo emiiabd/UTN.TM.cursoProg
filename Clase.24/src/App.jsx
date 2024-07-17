@@ -1,6 +1,5 @@
-import React,{ useState } from 'react';
-import Counter from './components/Counter/Counter';
-import FormCards from './components/formCards/formCards';
+import React from 'react';
+import { Counter, FormCards } from './components';
 
 function App() {
 /* 

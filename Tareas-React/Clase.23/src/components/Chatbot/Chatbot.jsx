@@ -4,12 +4,14 @@ import ChatTop from '../ChatTop/ChatTop';
 import './Chatbot.css'
 import ChatBottom from '../ChatBottom/ChatBottom';
 
-const Chatbot = ({title, DATA_MOOK}) => {
+const Chatbot = ({title, DATA_MOOK, handleSubmit, clearTextBox}) => {
+  
+
   return (
     <div className='chatbot'>
       <ChatTop title={title}/>
       <ChatWindows DATA_MOOK={DATA_MOOK}/>
-      <ChatBottom/>
+      <ChatBottom handleSubmit={handleSubmit} clearTextBox={clearTextBox}/>
     </div>
   )
 }

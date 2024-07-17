@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './chatBottom.css'
 
-const ChatBottom = () => {
+const ChatBottom = ({handleSubmit, clearTextBox}) => {
+
+  const [msj, setMsj] = useState('');
+  const handleChangeOnValue = (e) => {
+    setMsj(e.target.value)
+  }
+
   return (
-    <div className='chatBottom'>
-        <input type="text" placeholder="Escribe aqui..."/>
-        <button><i className="bi bi-send"></i></button>
-    </div>
+    <form className='chatBottom' onSubmit={(e) => (handleSubmit(e, msj), clearTextBox())}>
+        <input id='textBoxInput' type="text" placeholder="Escribe aqui..." required onChange={handleChangeOnValue}/>
+        <button type='submit'><i className="bi bi-send"></i></button>
+    </form>
   )
 }
 

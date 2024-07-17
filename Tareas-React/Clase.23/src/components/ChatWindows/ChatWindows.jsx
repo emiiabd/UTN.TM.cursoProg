@@ -3,7 +3,7 @@ import './chatWindows.css'
 const ChatWindows = ({DATA_MOOK}) => {
   const renderChat = (item,classType) =>{
     return(
-      <div key={item.id} className={classType}>
+      <div key={(item.id)} className={classType}>
         <p>{item.content} </p>
         <div className="state">
           <span>

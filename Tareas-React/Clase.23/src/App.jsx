@@ -1,56 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Chatbot from './components/Chatbot/Chatbot';
-
-const DATA_MOOK = [
-  {
-    author: 'pepe',
-    content: 'Hola?',
-    fecha: 'ayer a 15:34',
-    estado: 'visto',
-    id: 1
-  },
-  {
-    author: 'yo',
-    content: 'Sos real OMG',
-    fecha: 'ayer a 15:35',
-    estado: 'visto',
-    id: 2
-  },
-  {
-    author: 'pepe',
-    content: 'Obviamente, acaso lo dudaste?',
-    fecha: 'ayer a 15:36',
-    estado: 'visto',
-    id: 3
-  },
-  {
-    author: 'yo',
-    content: 'Jamas.',
-    fecha: 'ayer a 15:37',
-    estado: 'entregado',
-    id: 4
-  },
-  {
-    author: 'yo',
-    content: 'Jamas.',
-    fecha: 'ayer a 15:37',
-    estado: 'entregado',
-    id: 5
-  },
-  {
-    author: 'yo',
-    content: 'Jamas.',
-    fecha: 'ayer a 15:37',
-    estado: 'entregado',
-    id: 6
-  }
-];
+import DATA_MOOK from './data/DATA_MOOK';
 
 function App() {
 
+  const [dataList, setDataList] = useState(DATA_MOOK);
+
+  const automaticAwnsers = () => {
+    setDataList([...dataList, {author: 'pepe', content: 'Esta es una respuesta automatica del bot', fecha: 'ahora', estado: 'enviado', id: (dataList.length+1)}])
+  }
+
+  if(dataList[dataList.length-1].author == 'yo'){
+    automaticAwnsers()
+  }
+
+  const clearTextBox = () => {
+    document.getElementById('textBoxInput').value = '';
+  }
+  const handleSubmit = (e, textValue) =>{
+    e.preventDefault();
+    setDataList([...dataList, {author: 'yo', content: textValue, fecha: 'ahora', estado: 'enviado', id: (dataList.length+1)}])
+  }
+  
+
   return (
     <>
-    <Chatbot title="TripinDipy" DATA_MOOK={DATA_MOOK}/>
+    <div className='mainView'>
+      <Chatbot title="TripinDipy" DATA_MOOK={[...dataList]} handleSubmit={handleSubmit} clearTextBox={clearTextBox}/>
+    </div>
     </>
     
   )
