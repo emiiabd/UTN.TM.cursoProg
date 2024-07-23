@@ -23,11 +23,11 @@ export const ProductNew = () => {
     setFormValues({...formValues, [e.target.name]: e.target.value})
   }
 
-  for(const key in formSchema){
+  for(const prop in formSchema){
     formInpusts.push( 
-    <div key={key}> 
-      <label htmlFor={key}> {key.toUpperCase()}: </label>
-      <input type="text" id={key} name={key} required onChange={handleChangeOnValue}/> 
+    <div key={prop}> 
+      <label htmlFor={prop}> {prop.toUpperCase()}: </label>
+      <input type="text" id={prop} name={prop} required onChange={handleChangeOnValue}/> 
     </div> );
   }
 
