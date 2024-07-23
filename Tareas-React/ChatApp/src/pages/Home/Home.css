@@ -1,0 +1,8 @@
+.home{
+  width: 350px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 5px;
+}
