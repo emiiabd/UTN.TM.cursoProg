@@ -15,7 +15,7 @@ export const ProductNew = () => {
   const {products,handleSubmit} = useGlobalContext();
 
   const initialState = {...formSchema, id: products.length + 10};
-  const formInpusts = [];
+  const formInputs = [];
   
   const [formValues, setFormValues] = useState(initialState);
 
@@ -24,7 +24,7 @@ export const ProductNew = () => {
   }
 
   for(const prop in formSchema){
-    formInpusts.push( 
+    formInputs.push( 
     <div key={prop}> 
       <label htmlFor={prop}> {prop.toUpperCase()}: </label>
       <input type="text" id={prop} name={prop} required onChange={handleChangeOnValue}/> 
@@ -35,7 +35,7 @@ export const ProductNew = () => {
     <div>
       <form onSubmit={(e) => handleSubmit(e, formValues)}>
         <h1>Ingresar un producto</h1>
-        {formInpusts}
+        {formInputs}
         <button type="submit">Enviar</button>
       </form>
     </div>
