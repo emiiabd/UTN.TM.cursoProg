@@ -11,20 +11,20 @@ export const GlobalContextProvider = ({children}) =>{
   const handleDeleteProduct = (id) =>{
     setProducts(eliminarProductoPorId(id));
     navigate('/');
-  }
+  };
 
   const handleSubmit = (e, obj) =>{
     e.preventDefault();
     setProducts(crearProducto(obj));
     navigate('/');
-  }
+  };
 
 
   return(
     <GlobalContext.Provider value={{products: products, handleDeleteProduct: handleDeleteProduct, handleSubmit: handleSubmit}}>
       {children}
     </GlobalContext.Provider>
-  )
-}
+  );
+};
 
-export const useGlobalContext = () => useContext(GlobalContext)
+export const useGlobalContext = () => useContext(GlobalContext);

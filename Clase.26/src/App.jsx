@@ -1,6 +1,6 @@
-import React from 'react'
-import { Route, Routes, Link } from 'react-router-dom'
-import { Home, Cart, Detail, ProductNew } from './Pages'
+import React from 'react';
+import { Route, Routes, Link } from 'react-router-dom';
+import { Home, Cart, Detail, ProductNew } from './Pages';
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
     </Routes>
 
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import {ProductList} from '../../Components'
-import { useGlobalContext } from '../../Context/GlobalContext'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {ProductList} from '../../Components';
+import { useGlobalContext } from '../../Context/GlobalContext';
 
 const Home = () => {
 
-  const {products} = useGlobalContext()
+  const {products} = useGlobalContext();
 
   return (
     <div>
@@ -14,7 +14,7 @@ const Home = () => {
       <Link to={"/product/new"}>Aca</Link>
       <ProductList productos={products}/>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

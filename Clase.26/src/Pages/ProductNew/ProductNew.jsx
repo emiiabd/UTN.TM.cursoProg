@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useGlobalContext } from '../../Context/GlobalContext'
+import React, { useState } from 'react';
+import { useGlobalContext } from '../../Context/GlobalContext';
 
 export const ProductNew = () => {
   const formSchema = {
@@ -10,7 +10,7 @@ export const ProductNew = () => {
     codigo: '',
     categoria: '',
     thumbnail: '',
-  }
+  };
 
   const {products,handleSubmit} = useGlobalContext();
 
@@ -20,8 +20,8 @@ export const ProductNew = () => {
   const [formValues, setFormValues] = useState(initialState);
 
   const handleChangeOnValue = (e) => {
-    setFormValues({...formValues, [e.target.name]: e.target.value})
-  }
+    setFormValues({...formValues, [e.target.name]: e.target.value});
+  };
 
   for(const prop in formSchema){
     formInputs.push( 
@@ -29,7 +29,7 @@ export const ProductNew = () => {
       <label htmlFor={prop}> {prop.toUpperCase()}: </label>
       <input type="text" id={prop} name={prop} required onChange={handleChangeOnValue}/> 
     </div> );
-  }
+  };
 
   return (
     <div>
@@ -39,5 +39,5 @@ export const ProductNew = () => {
         <button type="submit">Enviar</button>
       </form>
     </div>
-  )
-}
+  );
+};
