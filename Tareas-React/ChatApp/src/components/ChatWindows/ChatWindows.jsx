@@ -13,6 +13,7 @@ const ChatWindows = ({memoryMsg}) => {
             <span>
               {item.fecha}
             </span>
+            
             <span>
               {item.hour}
             </span>

@@ -1,16 +1,9 @@
 const DATA_MOOK = [
   {
     nombre: 'Messi',
-    thumbnail: 'direccion de la imagen',
+    thumbnail: './src/assets/foto-1.webp',
     ultima_conexion: 'ayer',
     id: 1,
-    /* {
-      author: 'yo',
-      content: 'Jamas.',
-      fecha: 'ayer a 15:37',
-      estado: 'entregado',
-      id: 4
-    }, */
     mensajes: [
       {
         author: 'yo',
@@ -33,7 +26,7 @@ const DATA_MOOK = [
   {
     nombre: 'Abuelita',
     id: 2,
-    thumbnail: 'direccion de la imagen',
+    thumbnail: './src/assets/foto-2.jpg',
     ultima_conexion: 'ayer',
     mensajes: [
       {
@@ -57,7 +50,7 @@ const DATA_MOOK = [
   {
     nombre: 'Pedro',
     id: 3,
-    thumbnail: 'direccion de la imagen',
+    thumbnail: './src/assets/foto-3.webp',
     ultima_conexion: 'hoy',
     mensajes: [
       {
@@ -89,7 +82,7 @@ const DATA_MOOK = [
   {
     nombre: 'Laura',
     id: 4,
-    thumbnail: 'direccion de la imagen',
+    thumbnail: './src/assets/foto-4.webp',
     ultima_conexion: 'hoy',
     mensajes: [
       {
@@ -121,7 +114,7 @@ const DATA_MOOK = [
   {
     nombre: 'Carlos',
     id: 5,
-    thumbnail: 'direccion de la imagen',
+    thumbnail: './src/assets/foto-5.webp',
     ultima_conexion: 'hoy',
     mensajes: [
       {
@@ -153,7 +146,7 @@ const DATA_MOOK = [
   {
     nombre: 'Ana',
     id: 6,
-    thumbnail: 'direccion de la imagen',
+    thumbnail: './src/assets/foto-6.jpg',
     ultima_conexion: 'hoy',
     mensajes: [
       {
@@ -193,7 +186,7 @@ const DATA_MOOK = [
   {
     nombre: 'Juan',
     id: 7,
-    thumbnail: 'direccion de la imagen',
+    thumbnail: './src/assets/foto-7.webp',
     ultima_conexion: 'ayer',
     mensajes: [
       {

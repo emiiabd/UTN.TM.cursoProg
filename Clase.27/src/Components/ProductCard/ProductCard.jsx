@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({producto}) => {
   const {
@@ -10,7 +10,7 @@ const ProductCard = ({producto}) => {
     stock,
     codigo,
     categoria,
-  } = producto
+  } = producto;
 
   
   return (
@@ -21,7 +21,7 @@ const ProductCard = ({producto}) => {
       <span><b>Stock: </b> {stock}</span>
       <Link to={`/detail/${id}`}>Ver detalles</Link>
     </div>
-  )
-}
+  );
+};
 
-export default ProductCard
+export default ProductCard;

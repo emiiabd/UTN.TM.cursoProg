@@ -1,21 +1,31 @@
 .chatTop{
+  width: 100%;
+  height: 75px;
   background-color: #0071B7;
-  color: #fff;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  padding: 5px 20px;
   align-items: center;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  padding: 3px;
+  color: #fff;
+  font-size: 24px;
+  background-image: url('../../assets/BGChatTop.png');
 }
 
 .chatTop button{
-  font-size: 20px;
-  border-radius: 5px;
+  font-size: 40px;
+  color: #ffffff;
+  border-radius: 20%;
 }
 
 .chatTop button:hover{
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.705);
+  background-color: #0d8dc4e7;
   transition: 200ms ease-in-out;
+}
+
+.userContact{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

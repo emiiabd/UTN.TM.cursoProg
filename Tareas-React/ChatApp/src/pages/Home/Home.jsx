@@ -6,7 +6,7 @@ import { DATA_MOOK } from '../../data/data'
 const Home = () => {
   return (
     <div className='home'>
-      <div className="chatTop">
+      <div className="homeTop">
         <p>Contactos</p>
       </div>
       <Contacts DATA_MOOK={DATA_MOOK}/>

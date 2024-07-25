@@ -10,14 +10,7 @@ const ChatBottom = ({handleSubmit}) => {
   };
 
   return (
-    <form className='chatBottom' onSubmit=
-    {
-      (e) => 
-        {
-          handleSubmit(e, msj);
-          setMsj('');
-        }
-    }>
+    <form className='chatBottom' onSubmit={(e) => { handleSubmit(e, msj); setMsj('') }}>
         <input id='textBoxInput' type="text" placeholder="Escribe aqui..." required onChange={handleChangeOnValue} value={msj}/>
         <button type='submit'><i className="bi bi-send"></i></button>
     </form>

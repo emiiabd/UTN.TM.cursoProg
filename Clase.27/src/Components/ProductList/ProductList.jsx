@@ -1,5 +1,5 @@
-import React from 'react'
-import ProductCard from '../ProductCard/ProductCard'
+import React from 'react';
+import ProductCard from '../ProductCard/ProductCard';
 
 const ProductList = ({productos}) => {
   return (
@@ -11,7 +11,7 @@ const ProductList = ({productos}) => {
         )})
       }
     </div>
-  )
-}
+  );
+};
 
-export default ProductList
+export default ProductList;

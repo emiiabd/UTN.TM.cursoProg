@@ -4,17 +4,16 @@ import "./Chat.css";
 import { useParams } from "react-router-dom";
 import { obtenerDatosPorId } from "../../helpers/mensajes";
 
-
 const Chat = () => {
 
   const parametros = useParams();
 
   // FUNCTIONS
 
-  const { nombre, thumbnail, ultima_conexion, id, mensajes } =
-    obtenerDatosPorId(parametros.id);
-
+  const { nombre, thumbnail, ultima_conexion, id, mensajes } = obtenerDatosPorId(parametros.id);
+  
   const [memoryMsj, setMemoryMsj] = useState(mensajes);
+  console.log(thumbnail);
 
   const handleSubmit = (e, textValue) => {
     e.preventDefault();
@@ -34,7 +33,7 @@ const Chat = () => {
 
   return (
     <div className="chat">
-      <ChatTop title={nombre} />
+      <ChatTop title={nombre} thumbnail={thumbnail} />
       <ChatWindows memoryMsg={memoryMsj} />
       <ChatBottom handleSubmit={handleSubmit} />
     </div>

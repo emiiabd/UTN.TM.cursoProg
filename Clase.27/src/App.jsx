@@ -1,6 +1,6 @@
-import React from 'react'
-import { Route, Routes, Link } from 'react-router-dom'
-import { Home, Cart, Detail, ProductNew } from './Pages'
+import React from 'react';
+import { Route, Routes, Link } from 'react-router-dom';
+import { Home, Cart, Detail, ProductNew, Login } from './Pages';
 
 function App() {
 
@@ -8,13 +8,14 @@ function App() {
     <>
     <Routes>{/* Se utiliza esta utilidad para definir las rutas dentro de tu pag Web, lo bueno de esta util. es que no recarga la pagina evitando recargar el css o el js*/}
       <Route path="/" element={<Home/>} />
+      <Route path="/login" element={<Login/>} />
       <Route path="/detail/:producto_id" element={<Detail/>} />
       <Route path="/cart" element={<Cart/>} />
       <Route path="/product/new" element={<ProductNew/>} />
     </Routes>
 
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -1,12 +1,12 @@
-import React from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
-import { obtenerProductosPorId, eliminarProductoPorId } from '../../helpers/productos'
-import { useGlobalContext } from '../../Context/GlobalContext'
+import React from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { obtenerProductosPorId, eliminarProductoPorId } from '../../helpers/productos';
+import { useGlobalContext } from '../../Context/GlobalContext';
 
 const Detail = () => {
   /* Retorna un objeto con los parametros de la busqueda */
-  const parametros = useParams()
-  const {handleDeleteProduct} = useGlobalContext()
+  const parametros = useParams();
+  const {handleDeleteProduct} = useGlobalContext();
 
   const {
     nombre,
@@ -16,7 +16,7 @@ const Detail = () => {
     stock,
     codigo,
     categoria,
-  } = obtenerProductosPorId(parametros.producto_id)
+  } = obtenerProductosPorId(parametros.producto_id);
 
   return (
     <div>
@@ -28,7 +28,7 @@ const Detail = () => {
       <button>Comprar</button>
       <button onClick={() => handleDeleteProduct(id)}>Eliminar</button>
     </div>
-  )
-}
+  );
+};
 
-export default Detail
+export default Detail;

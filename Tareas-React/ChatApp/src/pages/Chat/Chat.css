@@ -1,11 +1,16 @@
 .chat{
-  width: 350px;
-  height: 650px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 5px;
+    width: 400px;
+    height: 752px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    background-color: #ffffff;
+    overflow: hidden;
+    align-items: center;
+    box-shadow: 0 4px 8px #0000001a;
 }
+
 
 button{
   border: none;
