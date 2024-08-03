@@ -1,0 +1,16 @@
+.btn .btnLogout{
+  padding: 8px;
+  border: 1px solid #353534b5;
+  border-radius: 12px;
+  background-color: #d57474b0;
+  color: #D6BD98;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.btn .btnLogout:hover{
+  background-color: #d57474dc;
+}

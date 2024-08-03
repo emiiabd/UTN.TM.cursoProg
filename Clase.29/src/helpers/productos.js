@@ -2,14 +2,14 @@ import productos from "../Data/productsData";
 
 const guardarEnLocalStorage = (obj) => localStorage.setItem('products', JSON.stringify(obj));
 
-export const obtenerProductos = () =>{ 
+export const obtenerProductos = () =>{
   const products = JSON.parse(localStorage.getItem('products')) ||  (guardarEnLocalStorage(productos), productos);
   return products
 };
 
 export const obtenerProductosPorId = (id) =>{
   const productosGuardados = obtenerProductos();
-  return productosGuardados.find(producto => Number(producto.id) === Number(id));
+  return productosGuardados.find(producto => String(producto.id) === String(id));
 };
 
 export const crearProducto = (obj) =>{
@@ -20,7 +20,7 @@ export const crearProducto = (obj) =>{
 
 export const eliminarProductoPorId = (id) =>{
   const productosGuardados = obtenerProductos();
-  const newList = productosGuardados.filter((producto) => Number(producto.id) !== Number(id))
+  const newList = productosGuardados.filter((producto) => producto.id !== id)
   return guardarEnLocalStorage(newList), newList
 };
 

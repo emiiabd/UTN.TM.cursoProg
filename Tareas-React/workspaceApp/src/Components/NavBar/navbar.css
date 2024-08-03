@@ -1,0 +1,28 @@
+.navBar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  width: 100%;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  background-color: #6d6f6c;
+  box-shadow: 0px 5px 15px 4px #3535359e;
+}
+
+.navBar h2{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #D6BD98;
+}
+
+.btn{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+  min-height: 40px;
+}
+

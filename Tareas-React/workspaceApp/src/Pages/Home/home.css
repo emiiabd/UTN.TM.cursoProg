@@ -1,0 +1,52 @@
+.mainViewHome{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #40534C;
+  color: #D6BD98;
+}
+
+.homeTop{
+  padding: 20px;
+  max-width: 320px;
+}
+
+.homeTop .title {
+  font-size: 32px;
+  text-align: center;
+  padding: 5px;
+  max-width: 320px;
+}
+
+.homeWS{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  max-width: 320px;
+  min-height: fit-content;
+  border: 1px solid #b0b0b0;
+  border-radius: 16px;
+  padding: 18px;
+  box-sizing: content-box;
+  margin: 0 12px;
+}
+
+.homeWS .btnBig{
+  border: 1px dashed #b0b0b0;
+  margin-top: 16px;
+}
+
+.homeWS .newWS:hover {
+  border: 1px solid #909090;
+  background-color: #677d6ab3;
+}
+
+.homeBottom{
+  position: fixed;
+  bottom: 0;
+}
