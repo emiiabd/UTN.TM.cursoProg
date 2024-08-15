@@ -1,89 +1,61 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {v4 as uuid} from 'uuid';
 import {DATA} from '../Data/data'
-import {userData} from '../Data/userData'
-import { ERRORS } from "../Data/errors";
-import { getUserID, getUsuariosEnLocal } from "../helpers/helpers";
+import { getUserInfo, getUsuariosEnLocal } from "../helpers/helpers";
 
 
 const GlobalContext = createContext();
 
 
 export const GlobalContextProvider = ({children}) =>{
-  // Initial States
-  const initialState = {
-    username: '',
-    password: ''
-  }
-  const initialStateError = {
-    username: [],
-    password: [],
-    globalError: [],
-    emptyCell: [],
-  }
-
-  
-
-  const isLogged = () => localStorage.getItem('user')
-
   
   // States
-  const [loginForm, setLoginForm] = useState(initialState);
-  const [errors, setErrors] = useState(initialStateError);
-  const [isLoggedIn, setIsLoggedIn] = useState(isLogged() ? true : false);
-  const [disabled, setDisabled] = useState(true)
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('user') ? true : false);
   const navigate = useNavigate();
-  
   useEffect(() => {
   if(!isLoggedIn) navigate('/login')}, [])
+  
+  const [errors, setErrors] = useState({});
 
   const handleLogOut = () => {
     localStorage.removeItem('user')
     setIsLoggedIn(false)
   }
 
-  const handleChangeValue = (e) => setLoginForm({...loginForm,[e.target.name]: e.target.value});
-  const findErrors = (from, IDtoValidate) => errors[from].find(objError => objError.id === IDtoValidate)
+  const addError = (error, origen) =>{
+    setErrors((prevState) => ({...prevState, [origen]: error}))
+  }
 
-  
-  const validateError = (from, toValidate) => {
-  if(findErrors(from, toValidate.id)){
-    if(toValidate.validate(loginForm[from])){
-      const newError = errors[from].filter(objError => objError.id !== toValidate.id)
-      setErrors({...errors, [from]: newError})
-    }
+  const deleteError = (origen) => {
+    setErrors((prevState) => ({...prevState, [origen]: ''}))
   }
-  else {
-    if(!toValidate.validate(loginForm[from])){
-      setErrors({...errors, [from]: [...errors[from], toValidate]})
-      console.log(errors)
-    }
-  }
-}
 
   const USERS = getUsuariosEnLocal();
-  const userID= getUserID();
-
+  
+  const {
+    name,
+    userId,
+  } = getUserInfo();
+  
+  const userID = userId
+  
+  const errorsValues =Object.values({...errors})
 
   return(
     <GlobalContext.Provider value={
       {
-      ERRORS: ERRORS,
       DATA: DATA,
       USERS: USERS,
       isLoggedIn,
       setIsLoggedIn,
-      loginForm,
-      setLoginForm,
-      errors,
+      addError,
+      deleteError,
       setErrors,
+      errors,
       handleLogOut,
       userID,
-      handleChangeValue,
-      validateError,
-      findErrors,
-      disabled,
+      name,
+      errorsValues,
 
       }}>
       {children}

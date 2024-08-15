@@ -1,16 +1,18 @@
-.btn .btnBack{
-  padding: 8px;
+.btnBack{
+  padding: 6px;
   border: 1px solid #353534b5;
   border-radius: 12px;
-  background-color: #384943ad;
+  background-color: #777777ad;
   color: #D6BD98;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+  font-size: 23px;
   cursor: pointer;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 
-.btn .btnBack:hover{
-  background-color: #536a62ad;
+.btnBack:hover {
+  background-color: #8e8e8ead;
 }

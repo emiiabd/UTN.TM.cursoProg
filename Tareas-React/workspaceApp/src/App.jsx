@@ -11,7 +11,7 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path='/login' element={<Login/>} />
       <Route path="/register" element={<Register/>} />
-      <Route path="/workSpace/:userID/:workSpaceID" element={<WorkSpace/>} />
+      <Route path="/workSpace/:workSpaceID/:channelID" element={<WorkSpace/>} />
       <Route path="/WorkSpace/New" element={<NewWorkSpace/>} />
       <Route path="/*" element={<NotFound/>} />
     </Routes>

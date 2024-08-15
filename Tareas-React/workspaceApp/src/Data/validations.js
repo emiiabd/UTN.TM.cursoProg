@@ -1,9 +1,30 @@
-import { userData } from "./userData";
+import { getUsuariosEnLocal } from "../helpers/helpers";
 
-export const validateUsernameLength = (value) => value.length > 3;
+export const validateLength = (value) => Boolean(value) && value.length > 5
 
-export const validatePasswords = (psw) => String(psw) === String(document.getElementById('psw2').value)
+export const validatePasswords = (value) => String(value) === String(document.getElementById('password').value)
 
-export const validateUsernames = (username) =>  userData.includes((user) => user.username === username);
+export const validateUsernames = (username) => Boolean(username) && !(getUsuariosEnLocal().find((user) => user.username === username)) && /^[a-zA-Z0-9_\-]+$/i.test(username)
 
-export const validateEmptyCell = (value) => value !== '';
+export const validationSchema = {
+    'name': {
+        validate: validateLength,
+        errorText: 'El nombre debe tener mas de 5 caracteres'
+    },
+    'username': {
+        validate: validateUsernames,
+        errorText: 'Nombre de usuario no valido o existente'
+    },
+    'password': {
+        validate: validateLength,
+        errorText: 'La contraseña debe tener mas de 5 caracteres'
+    },
+    'rptPassword': {
+        validate: validatePasswords,
+        errorText: 'Las contraseñas deben ser identicas'
+    },
+    'empty': {
+        validate: (value) => Boolean(value),
+        errorText: 'El campo no puede estar vacio'
+    }
+}

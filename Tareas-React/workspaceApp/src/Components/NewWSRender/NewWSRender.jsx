@@ -1,13 +1,16 @@
 import React from "react";
 import "./NewWSRender.css";
+import { Link } from "react-router-dom";
+import { useGlobalContext } from "../../Context/GlobalContext";
 
 const NewWSRender = ({handleCreateNewWorkSpace, handleOnChange}) => {
+  const {errorsValues} = useGlobalContext()
   return (
     <>
-      <div className="title">
-        <h3>Crear un nuevo workspace</h3>
-      </div>
       <form className="newWS" onSubmit={handleCreateNewWorkSpace}>
+        <div className="title">
+          <h3>Crear un nuevo workspace</h3>
+        </div>
         <div className="formScreen">
           <div className="inputs">
             <label htmlFor="WSname">Nombre del WorkSpace</label>
@@ -22,7 +25,6 @@ const NewWSRender = ({handleCreateNewWorkSpace, handleOnChange}) => {
           <div className="inputs">
             <label htmlFor="NewChannel">Desea crear un canal?</label>
             <input
-              id="psw"
               type="NewChannel"
               name="NewChannel"
               placeholder="Nombre del canal"
@@ -30,8 +32,16 @@ const NewWSRender = ({handleCreateNewWorkSpace, handleOnChange}) => {
             />
           </div>
         </div>
+        {
+          errorsValues.map((i, index) => {
+            if(i){
+              return <span className='errorForm' key={index}>{i}</span>
+            }
+          })
+        }
         <div className="buttons btnBig">
-          <input className="btnWS" type="submit" value="Crear nuevo entorno" />
+          <Link className="btnNW Cancelar" to={'../'} >Cancelar</Link>
+          <input className="btnNW Submit" type="submit" value="Crear" />
         </div>
       </form>
     </>

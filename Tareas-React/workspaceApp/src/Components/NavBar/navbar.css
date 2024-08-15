@@ -5,8 +5,8 @@
   justify-content: space-between;
   padding: 0 24px;
   width: 100%;
-  height: 75px;
-  position: absolute;
+  height: 10vh;
+  position: relative;
   top: 0;
   background-color: #6d6f6c;
   box-shadow: 0px 5px 15px 4px #3535359e;
@@ -18,7 +18,7 @@
   color: #D6BD98;
 }
 
-.btn{
+.btnNav{
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -26,3 +26,70 @@
   min-height: 40px;
 }
 
+.btnNav .btnBack{
+  padding: 8px;
+  border: 1px solid #353534b5;
+  border-radius: 12px;
+  background-color: #384943ad;
+  color: #D6BD98;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.btnNav .btnBack:hover{
+  background-color: #536a62ad;
+}
+
+.btnNav .btnHidden{
+  padding: 8px;
+  border: 1px solid #353534b5;
+  border-radius: 12px;
+  background-color: #384943ad;
+  color: #D6BD98;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnNav .btnHidden:hover{
+  background-color: #536a62ad;
+}
+
+.btnNav .btnLogout{
+  padding: 8px;
+  border: 1px solid #353534b5;
+  border-radius: 12px;
+  background-color: #b95e5eb0;
+  color: #D6BD98;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.btnNav .btnLogout:hover{
+  background-color: #d57474dc;
+}
+
+.btnNav .btnSign{
+  padding: 8px;
+  border: 1px solid #353534b5;
+  border-radius: 12px;
+  background-color: #6dff713d;
+  color: #D6BD98;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btnNav .btnSign:hover{
+  background-color: #4085428c;
+}

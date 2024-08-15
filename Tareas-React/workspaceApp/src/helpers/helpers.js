@@ -15,16 +15,14 @@ export const getUsuariosEnLocal = () =>{
   return users
 }
 
-/* const addUsuarioEnLocal = (obj) => localStorage.setItem('userData', JSON.stringify([...getUsuariosEnLocal(), obj])) */
 const dataMookShadow = (user) => getDatosEnLocal().filter((i) => !(i.userId === user.userId))
 
 export const generarWorkSpace = (user) => {
 
   const dataMook = dataMookShadow(user)
-  const { username, userId, userMemory } = user
+  const { userId, userMemory = [] } = user
   
   const newWorkSpace ={
-    username: username,
     userId,
     userMemory,
     }
@@ -33,9 +31,10 @@ export const generarWorkSpace = (user) => {
     guardarDatosEnLocal(dataMook)
 }
 
-export const generateGeneralChannel = () => generateNewChannel('general')
+export const generateGeneralChannel = () => generateNewChannel('General')
 
-export const generateNewChannel = (name) => ({name: name,
+export const generateNewChannel = (name) => ({
+  name: name,
   id: uuid(),
   thumbnail: '',
   messages: [
@@ -55,19 +54,18 @@ export const getUserById = (id) => {
   return (dataMook.find((i) => i.userId == id))
 }
 
-export const getUserID = () => { 
+export const getUserInfo = () => { 
   const userInfo = getLocalUser();
-  return userInfo.userId
+  return userInfo
 }
 
-export const registerNewUser = (username, password) => {
-  const randomId = uuid()
+export const registerNewUser = (name, username, password) => {
   const user = {
     username,
     password,
+    name,
     role: 'user',
-    userId: randomId,
-    userMemory: []
+    userId: uuid(),
   }
   guardarUsuariosEnLocal([...getUsuariosEnLocal(), user]);
   generarWorkSpace(user)
@@ -77,4 +75,18 @@ export const registerNewUser = (username, password) => {
 export const getWorkSpaceInfo = (userId, workSpaceID) =>  getUserById(userId).userMemory.find((i) => Number(i.workSpaceID) === Number(workSpaceID))
 
 export const getChannels = (userId, workSpaceID) => getWorkSpaceInfo(userId, workSpaceID).channels
+
+export const createNewChannel = (e, userId, workSpaceID, name) => {
+  e.preventDefault()
+  const user = getUserById(userId)
+  const newChannel = generateNewChannel(name)
+  const dataMook = dataMookShadow(user)
+
+  const workSpaceSelected = user.userMemory.find((workSpace)=> Number(workSpace.workSpaceID) === Number(workSpaceID))
+
+  workSpaceSelected.channels.push(newChannel)
+  
+  dataMook.push(user)
+  guardarDatosEnLocal(dataMook)
+}
 
